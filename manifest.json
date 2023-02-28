@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedAI",
+  "version": "0.0.1",
+  "permissions": ["tabs"],
+  "host_permissions": ["https://*.amazonaws.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/*"],
+      "css": ["styles.css"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_title": "LinkedAI"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
